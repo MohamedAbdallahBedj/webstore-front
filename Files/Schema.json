@@ -1,0 +1,73 @@
+{
+  "user": {
+    "id":"",
+    "name":"",
+    "email":"",
+    "phone":"",
+    "password":"",
+    "addresse":"",
+    "created_at":""
+  },
+  "seller": {
+    "id":"",
+    "name":"",
+    "email":"",
+    "phone":"",
+    "password":"",
+    "addresse":"",
+    "company":"",
+    "account_stat":"",
+    "verified":"",
+    "created_at":""
+  },
+  "product": {
+    "id":"",
+    "name":"",
+    "description":"",
+    "price":"",
+    "quantity":"",
+    "images":"",
+    "category":"",
+    "unit":"",
+    "brand":"",
+    "onSale":"",
+    "sellerId":"",
+    "reorderLevel":"",
+    "keywords":"",
+    "created_at":""
+  },
+  "order": {
+    "id":"",
+    "clientId":"",
+    "timestamp":"",
+    "total":"",
+    "state":"",
+    "shippingAddress":"",
+    "shippingMethod":"",
+    "trackingNumber":"",
+    "deliveryDate":"",
+    "notes":"",
+    "promoCode":"",
+    "discount":"",
+    "tax":"",
+    "transactionId":"",
+    "created_at":""
+  },
+  "orderItems": {
+    "id":"",
+    "orderId":"",
+    "productId":"",
+    "quantity":"",
+    "price":"",
+    "created_at":""
+  },
+  "payment": {
+    "id":"",
+    "orderId":"",
+    "userId":"",
+    "paid":"",
+    "timestamp":"",
+    "paymentMethod":"",
+    "created_at":""
+  }
+}
