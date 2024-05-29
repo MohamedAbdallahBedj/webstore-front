@@ -8,6 +8,7 @@ import {
   FaYoutube,
   FaFax,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const linksList = [
   {
@@ -94,16 +95,16 @@ const NavigationResponsive = ({ lang = "ar", dictionary = {} }) => {
                         key={`Sublink ${index}/${subIndex}`}
                         className="py-2 px-4 cursor-pointer normal-case whitespace-nowrap hover:bg-gray-200"
                       >
-                        <a href={subLink.href}>{subLink.label}</a>
+                        <Link to={subLink.href}>{subLink.label}</Link>
                       </li>
                     ))}
                   </ul>
                 </li>
               ) : (
                 <li className="py-3" key={`Link ${index}`}>
-                  <a {...link} className="hover:text-gray-300">
+                  <Link {...link} className="hover:text-gray-300">
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               )
             )}
@@ -112,30 +113,30 @@ const NavigationResponsive = ({ lang = "ar", dictionary = {} }) => {
           <ul className="flex flex-col py-4 gap-2 text-md">
             <li className="flex items-center gap-4">
               <FaMapPin className="" />
-              <a>{address || ""}</a>
+              <Link>{address || ""}</Link>
             </li>
             <li className="flex items-center gap-4">
               <FaPhoneAlt className="" />
-              <a dir="ltr">{contacts?.phone || ""}</a>
+              <Link dir="ltr">{contacts?.phone || ""}</Link>
             </li>
             <li className="flex items-center gap-4">
               <FaFax className="" />
-              <a dir="ltr">{contacts?.fax || ""}</a>
+              <Link dir="ltr">{contacts?.fax || ""}</Link>
             </li>
             <li className="flex items-center gap-4">
               <FaEnvelope />
-              <a href={`mailto:${contacts?.email || ""}`}>
+              <Link to={`mailto:${contacts?.email || ""}`}>
                 {contacts?.email || ""}
-              </a>
+              </Link>
             </li>
           </ul>
           <nav className="mt-4 flex items-center justify-center gap-4">
-            <a href={links?.facebook || ""} target="_blank">
+            <Link to={links?.facebook || ""} target="_blank">
               <FaFacebook size={24} className="" />
-            </a>
-            <a href={links?.youtube || ""} target="_blank">
+            </Link>
+            <Link to={links?.youtube || ""} target="_blank">
               <FaYoutube size={24} className="" />
-            </a>
+            </Link>
           </nav>
         </aside>
       </nav>

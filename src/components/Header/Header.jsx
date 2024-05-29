@@ -1,9 +1,10 @@
 import React from "react";
 import IconLink from "../../tools/IconLink/IconLink";
+import { Link } from "react-router-dom";
 
 const links = [
   {
-    link: "#",
+    link: "/authentication",
     label: "Account",
     icon: () => (
       <svg
@@ -47,9 +48,9 @@ const links = [
 const Header = () => {
   return (
     <header className="flex flex-col gap-4 justify-center items-center py-4 border-b-2 border-opacity-10 md:mx-8 md:flex-row md:justify-between lg:max-w-7xl lg:mx-auto">
-      <a href="/" className=" transition-transform hover:scale-105">
+      <Link to="/" className=" transition-transform hover:scale-105">
         <img alt="logo" src="/logo.png" className=" max-w-24" />
-      </a>
+      </Link>
       <form>
         <label
           htmlFor="default-search"

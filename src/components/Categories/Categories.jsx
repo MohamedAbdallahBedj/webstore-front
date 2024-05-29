@@ -4,7 +4,7 @@ const Categories = () => {
   return (
     <div className="py-16 md:mx-8 lg:max-w-7xl lg:mx-auto">
       <div className="flex flex-wrap justify-center gap-8 mx-auto">
-        <a className=" max-w-[350px] drop-shadow-xl" href="#">
+        <a className=" max-w-[350px] drop-shadow-xl" to="#">
           <div className=" overflow-hidden">
             <img
               className=" aspect-[4/3] object-cover transition-all scale-110 hover:-translate-x-2 hover:-translate-y-2 hover:opacity-70"
@@ -16,7 +16,7 @@ const Categories = () => {
             Lorem ipsum dolor
           </p>
         </a>
-        <a className=" max-w-[350px] drop-shadow-xl" href="#">
+        <a className=" max-w-[350px] drop-shadow-xl" to="#">
           <div className=" overflow-hidden">
             <img
               className=" aspect-[4/3] object-cover transition-all scale-110 hover:-translate-x-2 hover:-translate-y-2 hover:opacity-70"
@@ -28,7 +28,7 @@ const Categories = () => {
             Lorem ipsum dolor
           </p>
         </a>
-        <a className=" max-w-[350px] drop-shadow-xl" href="#">
+        <a className=" max-w-[350px] drop-shadow-xl" to="#">
           <div className=" overflow-hidden">
             <img
               className=" aspect-[4/3] object-cover transition-all scale-110 hover:-translate-x-2 hover:-translate-y-2 hover:opacity-70"

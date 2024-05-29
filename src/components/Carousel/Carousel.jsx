@@ -1,10 +1,11 @@
 "use client";
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const api = "";
 
-function Carousel({ lang = "fr", dictionary = {}, slides = [] }) {
+function Carousel({ lang = "fr", slides = [] }) {
   const [currentIndex, setCurrentIndex] = React.useState(0);
 
   React.useEffect(() => {
@@ -30,11 +31,9 @@ function Carousel({ lang = "fr", dictionary = {}, slides = [] }) {
                 exit={{ opacity: 0 }}
                 key={index}
                 style={{
-                  backgroundImage: `linear-gradient(${
-                    lang === "ar" ? "-" : ""
-                  }150deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 60%, rgba(0,0,0,0) 100%), url(${`${
-                    slide?.images[0]?.link || "notFound.png"
-                  }`})`,
+                  backgroundImage: `linear-gradient(${lang === "ar" ? "-" : ""
+                    }150deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 60%, rgba(0,0,0,0) 100%), url(${`${slide?.images[0]?.link || "notFound.png"
+                    }`})`,
                 }}
                 className={`absolute inset-0 bg-center bg-cover text-slate-200 pt-10 ps-10`}
               >
@@ -57,9 +56,9 @@ function Carousel({ lang = "fr", dictionary = {}, slides = [] }) {
                   </h1>
                 </motion.div>
                 <div className="mt-8">
-                  <a href={`#`} className="bg-[#008000] py-2 px-8 rounded">
+                  <Link to={`#`} className="bg-[#008000] py-2 px-8 rounded">
                     En savoir plus
-                  </a>
+                  </Link>
                 </div>
               </motion.div>
             )

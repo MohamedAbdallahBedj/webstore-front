@@ -5,6 +5,7 @@ import {
   AiFillTwitterCircle,
   AiFillPhone,
 } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -19,18 +20,18 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex space-x-4">
-            <a href="#" className="text-gray-400 hover:text-gray-500">
+            <Link to="#" className="text-gray-400 hover:text-gray-500">
               <AiFillFacebook />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-gray-500">
+            </Link>
+            <Link to="#" className="text-gray-400 hover:text-gray-500">
               <AiFillInstagram />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-gray-500">
+            </Link>
+            <Link to="#" className="text-gray-400 hover:text-gray-500">
               <AiFillTwitterCircle />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-gray-500">
+            </Link>
+            <Link to="#" className="text-gray-400 hover:text-gray-500">
               <AiFillPhone />
-            </a>
+            </Link>
           </div>
         </div>
         <div className="my-4 col-span-2 grid grid-cols-2 gap-4">
@@ -40,30 +41,30 @@ const Footer = () => {
                 Solutions
               </h3>
               <div className="mt-4 space-y-4">
-                <a
-                  href="#"
+                <Link
+                  to="#"
                   className="text-base text-gray-500 hover:text-gray-900 block"
                 >
                   Marketing
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="#"
                   className="text-base text-gray-500 hover:text-gray-900 block"
                 >
                   Analitycs
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="#"
                   className="text-base text-gray-500 hover:text-gray-900 block"
                 >
                   Commerce
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="#"
                   className="text-base text-gray-500 hover:text-gray-900 block"
                 >
                   Insights
-                </a>
+                </Link>
               </div>
             </div>
             <div>
@@ -71,25 +72,25 @@ const Footer = () => {
                 Support
               </h3>
               <div className="mt-4 space-y-4">
-                <a
-                  href="#"
+                <Link
+                  to="#"
                   className="text-base text-gray-500 hover:text-gray-900 block"
                 >
                   Pricing
-                </a>
-                {/* <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Documentation</a> */}
-                <a
-                  href="#"
+                </Link>
+                {/* <Link to="#" className="text-base text-gray-500 hover:text-gray-900 block">Documentation</Link> */}
+                <Link
+                  to="#"
                   className="text-base text-gray-500 hover:text-gray-900 block"
                 >
                   Guides
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="#"
                   className="text-base text-gray-500 hover:text-gray-900 block"
                 >
                   API Status
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -99,30 +100,30 @@ const Footer = () => {
                 Solutions
               </h3>
               <div className="mt-4 space-y-4">
-                <a
-                  href="#"
+                <Link
+                  to="#"
                   className="text-base text-gray-500 hover:text-gray-900 block"
                 >
                   Marketing
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="#"
                   className="text-base text-gray-500 hover:text-gray-900 block"
                 >
                   Analitycs
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="#"
                   className="text-base text-gray-500 hover:text-gray-900 block"
                 >
                   Commerce
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="#"
                   className="text-base text-gray-500 hover:text-gray-900 block"
                 >
                   Insights
-                </a>
+                </Link>
               </div>
             </div>
             <div>
@@ -130,25 +131,25 @@ const Footer = () => {
                 Support
               </h3>
               <div className="mt-4 space-y-4">
-                <a
-                  href="#"
+                <Link
+                  to="#"
                   className="text-base text-gray-500 hover:text-gray-900 block"
                 >
                   Pricing
-                </a>
-                {/* <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Documentation</a> */}
-                <a
-                  href="#"
+                </Link>
+                {/* <Link to="#" className="text-base text-gray-500 hover:text-gray-900 block">Documentation</Link> */}
+                <Link
+                  to="#"
                   className="text-base text-gray-500 hover:text-gray-900 block"
                 >
                   Guides
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="#"
                   className="text-base text-gray-500 hover:text-gray-900 block"
                 >
                   API Status
-                </a>
+                </Link>
               </div>
             </div>
           </div>

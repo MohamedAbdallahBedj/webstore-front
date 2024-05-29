@@ -1,5 +1,5 @@
 import React from "react";
-import ProductCard from "../../tools/IconLink/ProductCard/ProductCard";
+import ProductCard from "../../tools/ProductCard/ProductCard";
 
 const tabs = [
   {

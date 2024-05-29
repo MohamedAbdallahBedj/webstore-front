@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const links = [
   {
-    href: "#",
+    href: "/",
     label: "Home",
   },
   {
@@ -51,7 +52,7 @@ const Navigation = () => {
                     key={`Sublink ${index}/${subIndex}`}
                     className="py-2 px-4 cursor-pointer normal-case whitespace-nowrap hover:bg-gray-200"
                   >
-                    <a href={subLink.href}>{subLink.label}</a>
+                    <Link to={subLink.href}>{subLink.label}</Link>
                   </li>
                 ))}
               </ul>
