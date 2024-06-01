@@ -5,13 +5,13 @@ const Login = ({ setState }) => {
   return (
     <div className="contain py-16">
       <div className="max-w-lg mx-auto px-6 py-7 rounded overflow-hidden">
-        <h2 className="text-2xl uppercase font-medium mb-1">Login</h2>
-        <p className="text-gray-600 mb-6 text-sm">welcome back customer</p>
+        <h2 className="text-2xl uppercase font-medium mb-1">S'identifier</h2>
+        <p className="text-gray-600 mb-6 text-sm">Veuillez s'indentifier</p>
         <form action="#" method="post" autoComplete="off">
           <div className="space-y-2">
             <div>
               <label htmlFor="email" className="text-gray-600 mb-2 block">
-                Email address
+                Addresse email
               </label>
               <input
                 type="email"
@@ -23,7 +23,7 @@ const Login = ({ setState }) => {
             </div>
             <div>
               <label htmlFor="password" className="text-gray-600 mb-2 block">
-                Password
+                Mot de passe
               </label>
               <input
                 type="password"
@@ -46,28 +46,28 @@ const Login = ({ setState }) => {
                 htmlFor="remember"
                 className="text-gray-600 ml-3 cursor-pointer"
               >
-                Remember me
+                Souviens-toi de moi
               </label>
             </div>
 
           </div>
           <Link to="#" className="text-primary mt-4">
-            Forgot password
+            Mot de passe oublié?
           </Link>
           <div className="mt-4">
             <button
               type="submit"
               className="block w-full py-2 text-center text-white bg-blue-700 border border-primary rounded hover:bg-blue-500 hover:text-primary transition uppercase font-roboto font-medium"
             >
-              Login
+              S'identifier
             </button>
           </div>
         </form>
         {/* ./login with */}
         <p className="mt-4 text-center text-gray-600">
-          Don't have account?{" "}
+          Vous n'avez pas de compte ?{" "}
           <button onClick={() => { setState('signup') }} className="text-primary">
-            Register now
+            S'inscrire maintenant
           </button>
         </p>
       </div>

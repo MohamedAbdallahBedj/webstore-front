@@ -13,28 +13,47 @@ export function useAuth() {
 // AuthProvider component to wrap your app with
 export function AuthProvider({ children }) {
     const [user, setUser] = useState(null); // Current user state
-    const [loading, setLoading] = useState(true); // Loading state while checking auth status
+    const [loading, setLoading] = useState(false); // Loading state while checking auth status
 
-    // Function to check if user is authenticated
-    function isAuthenticated() {
-        const token = localStorage.getItem('token');
-        return !!token; // Return true if token exists, false otherwise
-    }
+
 
     // Function to handle user login
-    async function login(email, password) {
-        // Simulated API call to authenticate user
+    const login = async (credentials) => {
         try {
-            // Here you would typically send a request to your backend with the email and password
-            // and receive a token in response
-            const token = 'your_auth_token';
-            localStorage.setItem('token', token); // Store token in local storage
-            setUser({ email }); // Set user object with email (you can include more user details if needed)
+            // Perform API call to authenticate user
+            setLoading(true)
+            const response = await fetch('https://your-api-url/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(credentials),
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to login');
+            }
+
+            // Assuming the server responds with a JWT token
+            const { token } = await response.json();
+
+            // Decode the token to get user data
+            const decodedToken = jwtDecode(token);
+
+            // Set user data and token in state
+            setUser(decodedToken);
+
+            // Store token in local storage
+            localStorage.setItem('token', token);
+
+            return decodedToken;
         } catch (error) {
-            console.error('Login failed:', error);
-            throw new Error('Login failed');
+            console.error('Login error:', error);
+            throw error;
+        } finally {
+            setLoading(false);
         }
-    }
+    };
 
     // Function to handle user logout
     function logout() {
@@ -43,18 +62,43 @@ export function AuthProvider({ children }) {
     }
 
     useEffect(() => {
-        // Check authentication status on component mount
-        const token = localStorage.getItem('token');
-        if (token) {
-            // If token exists, set user state
-            setUser({ email: 'user@example.com' }); // Here you can fetch user data using the token if needed
-        }
-        setLoading(false); // Set loading to false after checking auth status
+        const verifyToken = async () => {
+            const token = localStorage.getItem('token');
+            if (token) {
+                try {
+                    setLoading(true);
+                    // Make an API call to your backend to verify the token
+                    const response = await fetch('https://your-api-url/verify-token', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            Authorization: `Bearer ${token}`,
+                        },
+                    });
+
+                    if (response.ok) {
+                        const decodedToken = jwtDecode(token);
+                        setUser(decodedToken);
+                        console.log('response ok')
+                    } else {
+                        console.log('response not ok')
+                        throw new Error('Token verification failed');
+                    }
+                } catch (error) {
+                    console.error('Token verification failed:', error);
+                    logout();
+                } finally {
+                    setLoading(false);
+                }
+            }
+        };
+
+        verifyToken();
+
     }, []);
 
     const value = {
         user,
-        isAuthenticated,
         login,
         logout,
         loading,

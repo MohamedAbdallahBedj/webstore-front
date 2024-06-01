@@ -13,37 +13,37 @@ import { Link } from "react-router-dom";
 const linksList = [
   {
     href: "#",
-    label: "Home",
+    label: "Acceuil",
   },
   {
     href: "#",
-    label: "Navigate",
+    label: "Navigation",
   },
   {
     parent: true,
-    label: "Categories",
+    label: "Catégories",
     children: [
       {
         href: "#",
-        label: "Sub Page",
+        label: "Sous Page",
       },
       {
         href: "#",
-        label: "Sub Page",
+        label: "Sous Page",
       },
     ],
   },
   {
     href: "#",
-    label: "Products",
+    label: "Produits",
   },
   {
     href: "#",
-    label: "About Us",
+    label: "A Propos",
   },
   {
     href: "#",
-    label: "Contacts",
+    label: "Contact",
   },
 ];
 
@@ -68,9 +68,8 @@ const NavigationResponsive = ({ lang = "ar", dictionary = {} }) => {
           onClick={toggleOpen}
         />
         <aside
-          className={`fixed p-4 inset-y-0 inset-x-0 z-10 overflow-y-auto transition-all ease-in-out duration-700 bg-blue-700 ${
-            open ? "" : initialPosition
-          }`}
+          className={`fixed p-4 inset-y-0 inset-x-0 z-10 overflow-y-auto transition-all ease-in-out duration-700 bg-blue-700 ${open ? "" : initialPosition
+            }`}
         >
           <span className="flex justify-between">
             <div className="flex gap-2">

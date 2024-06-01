@@ -6,26 +6,26 @@ const Signup = ({ setState }) => {
     <div className="contain py-16">
       <div className="max-w-lg mx-auto px-6 py-7 rounded overflow-hidden">
         <h2 className="text-2xl uppercase font-medium mb-1">
-          Create an account
+          Créer un compte
         </h2>
-        <p className="text-gray-600 mb-6 text-sm">Register for new cosutumer</p>
+        <p className="text-gray-600 mb-6 text-sm">Inscrivez-vous en tant que nouveau client</p>
         <form action="#" method="post" autoComplete="off">
           <div className="space-y-2">
             <div>
               <label htmlFor="name" className="text-gray-600 mb-2 block">
-                Full Name
+                Nom complet
               </label>
               <input
                 type="text"
                 name="name"
                 id="name"
                 className="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded focus:ring-0 focus:border-primary placeholder-gray-400"
-                placeholder="fulan fulana"
+                placeholder="john doe"
               />
             </div>
             <div>
               <label htmlFor="email" className="text-gray-600 mb-2 block">
-                Email address
+                Addresse Email
               </label>
               <input
                 type="email"
@@ -37,7 +37,7 @@ const Signup = ({ setState }) => {
             </div>
             <div>
               <label htmlFor="password" className="text-gray-600 mb-2 block">
-                Password
+                Mot de passe
               </label>
               <input
                 type="password"
@@ -49,7 +49,7 @@ const Signup = ({ setState }) => {
             </div>
             <div>
               <label htmlFor="confirm" className="text-gray-600 mb-2 block">
-                Confirm password
+                Confirmer le mot de passe
               </label>
               <input
                 type="password"
@@ -60,40 +60,21 @@ const Signup = ({ setState }) => {
               />
             </div>
           </div>
-          <div className="mt-6">
-            <div className="flex items-center">
-              <input
-                type="checkbox"
-                name="aggrement"
-                id="aggrement"
-                className="text-primary focus:ring-0 rounded-sm cursor-pointer"
-              />
-              <label
-                htmlFor="aggrement"
-                className="text-gray-600 ml-3 cursor-pointer"
-              >
-                I have read and agree to the{" "}
-                <Link to="#" className="text-primary">
-                  terms &amp; conditions
-                </Link>
-              </label>
-            </div>
-          </div>
+
           <div className="mt-4">
             <button
               type="submit"
               className="block w-full py-2 text-center text-white bg-blue-700 border border-primary rounded hover:bg-blue-400 hover:text-primary transition uppercase font-roboto font-medium"
             >
-              create account
+              Créer un compte
             </button>
           </div>
         </form>
         {/* ./login with */}
         <p className="mt-4 text-center text-gray-600">
-          Already have account?
-
+          Vous avez déjà un compte ? {" "}
           <button onClick={() => { setState('login') }} className="text-primary">
-            Login now
+            S'identifier maintenant
           </button>
         </p>
       </div>

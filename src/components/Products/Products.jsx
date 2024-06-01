@@ -8,19 +8,19 @@ const tabs = [
   },
   {
     id: 1,
-    label: "Fruits & Vegetables",
+    label: "Fruits & Légumes",
   },
   {
     id: 3,
-    label: "Meat",
+    label: "Viande",
   },
   {
     id: 4,
-    label: "Drinks",
+    label: "Boissons",
   },
   {
     id: 5,
-    label: "Sweets",
+    label: "Desserts",
   },
 ];
 
@@ -29,9 +29,9 @@ const products = [
   {
     image:
       "https://images.unsplash.com/photo-1609161307645-3ad8d7cafb55?q=80&w=1774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    category: "Vegetables",
+    category: "Légumes",
     rating: "5",
-    label: "Potatoes",
+    label: "Pomme de terre",
     price: "0.0",
     promotion: "false",
     newPrice: "0.0",
@@ -39,9 +39,9 @@ const products = [
   {
     image:
       "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?q=80&w=1904&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    category: "Vegetables",
+    category: "Légumes",
     rating: "5",
-    label: "Tomatoes",
+    label: "Tomates",
     price: "0.0",
     promotion: "false",
     newPrice: "0.0",
@@ -49,9 +49,9 @@ const products = [
   {
     image:
       "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    category: "Vegetables",
+    category: "Légumes",
     rating: "5",
-    label: "Carrots",
+    label: "Carotte",
     price: "0.0",
     promotion: "false",
     newPrice: "0.0",
@@ -61,7 +61,7 @@ const products = [
 const Products = () => {
   return (
     <div className="py-16 mx-4 md:mx-8 lg:max-w-7xl lg:mx-auto">
-      <h1 className=" text-3xl text-center font-bold">Popular Products</h1>
+      <h1 className=" text-3xl text-center font-bold">Produits</h1>
       <p className=" max-w-3xl text-base text-center text-gray-400 my-4 px-8 mx-auto">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore lacus vel facilisis.

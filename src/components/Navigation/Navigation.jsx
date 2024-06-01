@@ -4,37 +4,37 @@ import { Link } from "react-router-dom";
 const links = [
   {
     href: "/",
-    label: "Home",
+    label: "Acceuil",
   },
   {
     href: "#",
-    label: "Navigate",
+    label: "Navigation",
   },
   {
     parent: true,
-    label: "Categories",
+    label: "Catégories",
     children: [
       {
         href: "#",
-        label: "Sub Page",
+        label: "Sous Page",
       },
       {
         href: "#",
-        label: "Sub Page",
+        label: "Sous Page",
       },
     ],
   },
   {
     href: "#",
-    label: "Products",
+    label: "Produits",
   },
   {
     href: "#",
-    label: "About Us",
+    label: "A Propos",
   },
   {
     href: "#",
-    label: "Contacts",
+    label: "Contact",
   },
 ];
 
