@@ -72,7 +72,7 @@ const Products = () => {
                         {tabs.map((item, index) => (
                             <li
                                 key={`Tab ${index}`}
-                                className="px-4 py-4 mt-2 flex justify-between rounded-md bg-slate-50 border border-slate-200 text-sm"
+                                className="px-4 py-4 mt-2 flex justify-between rounded-md bg-slate-50 border border-slate-200 text-sm cursor-pointer hover:bg-slate-200"
                             >
                                 <p>{item.label}</p>
                                 <svg

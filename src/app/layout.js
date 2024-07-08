@@ -3,6 +3,9 @@ import "./../assets/globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Copyright from "@/components/Copyright";
+import { AuthProvider } from "@/contexts/AuthContext";
+import { CartContext } from "@/contexts/CartContext";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,10 +18,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fr">
       <body className={inter.className}>
-        <Header />
-        {children}
-        <Footer />
-        <Copyright />
+        <AuthProvider>
+          <CartContext>
+            <Header />
+            {children}
+            <Footer />
+            <Copyright />
+          </CartContext>
+
+        </AuthProvider>
       </body>
     </html>
   );

@@ -24,7 +24,7 @@ const links = [
         ),
     },
     {
-        link: "#",
+        link: "/cart",
         label: "Panier",
         icon: () => (
             <svg

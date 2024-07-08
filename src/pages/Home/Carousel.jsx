@@ -51,12 +51,12 @@ function Carousel({ lang = "fr", slides = [] }) {
                                             {new Date(slide.date).toLocaleDateString()}
                                         </p>
                                     </span>
-                                    <h1 className={`max-w-[500px] text-3xl font-medium`}>
+                                    <h1 className={`max-w-[500px] text-3xl font-medium mt-2`}>
                                         {slide[`title_${lang}`]}
                                     </h1>
                                 </motion.div>
-                                <div className="mt-8">
-                                    <Link href={`#`} className="bg-[#008000] py-2 px-8 rounded">
+                                <div className="mt-6">
+                                    <Link href={`#`} className="bg-blue-700 py-2 px-8 rounded">
                                         En savoir plus
                                     </Link>
                                 </div>
